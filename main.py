@@ -36,11 +36,11 @@ def extract_rpm_db_from_container_image(container_image_ref: str) -> (str, str):
             ["oc", "image", "extract", container_image_ref, "--path", "/var/lib/rpm/:" + rpm_folder],
             capture_output=True, text=True, check=True)
     except subprocess.CalledProcessError as e:
-        print("Failed extract image from " + container_image_ref + "\n" + e.stderr)
+        print(f"Failed to extract container image from {container_image_ref} \n  {e.stderr}")
         return None
 
-    print(datetime.now().strftime("%H:%M:%S.%f")[
-          :-3] + " - containerImage " + container_image_ref + " rpmDB was extracted successfully\n")
+    print(f"{datetime.now().strftime('%H:%M:%S.%f')[:-3]}  - containerImage  {container_image_ref}  "
+          f"rpmDB was extracted successfully\n")
     return container_image_ref, rpm_folder
 
 
@@ -55,7 +55,7 @@ def get_unsigned_rpms_from_rpmdb(rpm_db_folder: str) -> Optional[List[str]]:
                                                               "%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig}\n",
                                                               "--dbpath", rpm_db_folder], capture_output=True, text=True)
     except subprocess.CalledProcessError as e:
-        print("Failed to run rpm query on " + rpm_db_folder + "\n" + e.stderr)
+        print(f"Failed to run rpm query on {rpm_db_folder} \n {e.stderr}")
         return None
 
     unsigned_rpms: List[str] = []
@@ -79,7 +79,7 @@ if __name__ == '__main__':
         if rpm_db_folder is not None:
             unsigned_rpms = get_unsigned_rpms_from_rpmdb(rpm_db_folder=rpm_db_folder[1])
             if unsigned_rpms is not None:
-                print("Unsigned packages for container image " + rpm_db_folder[0])
+                print(f"Unsigned packages for container image {rpm_db_folder[0]}")
                 print(unsigned_rpms)
             else:
-                print("All packages in container image " + rpm_db_folder[0] + " are signed")
+                print(f"All packages in container image {rpm_db_folder[0]} are signed")
