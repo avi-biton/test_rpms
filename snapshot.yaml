@@ -1,0 +1,190 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Snapshot
+metadata:
+  generateName: acs-
+  annotations:
+    pac.test.appstudio.openshift.io/pull-request: '8689'
+    pac.test.appstudio.openshift.io/url-repository: stackrox
+    pac.test.appstudio.openshift.io/repository: roxctl
+    pac.test.appstudio.openshift.io/git-provider: github
+    pac.test.appstudio.openshift.io/on-event: '[pull_request]'
+    pac.test.appstudio.openshift.io/event-type: pull_request
+    pac.test.appstudio.openshift.io/url-org: stackrox
+    pac.test.appstudio.openshift.io/log-url: 'https://console.redhat.com/preview/application-pipeline'
+    pac.test.appstudio.openshift.io/max-keep-runs: '3'
+    pac.test.appstudio.openshift.io/on-target-branch: '[*]'
+    pac.test.appstudio.openshift.io/original-prname: main-on-pull-request
+    build.appstudio.openshift.io/repo: >-
+      https://github.com/stackrox/stackrox?rev=429e796a9b73dd9f271b5b558d242e53794221e9
+    pac.test.appstudio.openshift.io/sha: 429e796a9b73dd9f271b5b558d242e53794221e9
+    pac.test.appstudio.openshift.io/repo-url: 'https://github.com/stackrox/stackrox'
+    pac.test.appstudio.openshift.io/sender: msugakov
+    pac.test.appstudio.openshift.io/installation-id: '41511273'
+    test.appstudio.openshift.io/status: >-
+      [{"scenario":"acs-enterprise-contract-redhat-no-hermetic","status":"TestFail","lastUpdateTime":"2023-12-05T10:45:40.669617517Z","details":"Integration
+      test
+      failed","startTime":"2023-12-05T10:44:05.558198403Z","completionTime":"2023-12-05T10:45:40.669617517Z","testPipelineRunName":"acs-4dm5m-cj5pd"},{"scenario":"acs-enterprise-contract-allow-quay-registry","status":"TestFail","lastUpdateTime":"2023-12-05T10:48:13.024998041Z","details":"Integration
+      test
+      failed","startTime":"2023-12-05T10:44:05.535096579Z","completionTime":"2023-12-05T10:48:13.024998041Z","testPipelineRunName":"acs-4dm5m-qzhcs"}]
+    pac.test.appstudio.openshift.io/sha-url: >-
+      https://github.com/stackrox/stackrox/commit/429e796a9b73dd9f271b5b558d242e53794221e9
+    pac.test.appstudio.openshift.io/state: completed
+    build.appstudio.redhat.com/target_branch: master
+    build.appstudio.redhat.com/pull_request_number: '8689'
+    pac.test.appstudio.openshift.io/sha-title: 'chore(deps): update rhtap references (misha/rhtap-main-onboarding) (#8880)'
+    pac.test.appstudio.openshift.io/git-auth-secret: pac-gitauth-qkhh
+    pac.test.appstudio.openshift.io/branch: master
+    pac.test.appstudio.openshift.io/check-run-id: '19323605484'
+    build.appstudio.redhat.com/commit_sha: 429e796a9b73dd9f271b5b558d242e53794221e9
+  resourceVersion: '1069003978'
+  name: acs-4dm5m
+  uid: 93330627-bbf2-4ae3-bdbe-c91fa012c145
+  creationTimestamp: '2023-12-05T10:44:05Z'
+  generation: 1
+  managedFields:
+    - apiVersion: appstudio.redhat.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          .: {}
+          'f:conditions': {}
+      manager: manager
+      operation: Update
+      subresource: status
+      time: '2023-12-05T10:44:05Z'
+    - apiVersion: appstudio.redhat.com/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:pac.test.appstudio.openshift.io/on-target-branch': {}
+            'f:pac.test.appstudio.openshift.io/state': {}
+            'f:pac.test.appstudio.openshift.io/repo-url': {}
+            'f:pac.test.appstudio.openshift.io/sender': {}
+            'f:test.appstudio.openshift.io/status': {}
+            'f:pac.test.appstudio.openshift.io/sha-title': {}
+            'f:build.appstudio.redhat.com/target_branch': {}
+            'f:pac.test.appstudio.openshift.io/git-auth-secret': {}
+            'f:build.appstudio.redhat.com/commit_sha': {}
+            'f:build.appstudio.redhat.com/pull_request_number': {}
+            .: {}
+            'f:pac.test.appstudio.openshift.io/check-run-id': {}
+            'f:pac.test.appstudio.openshift.io/branch': {}
+            'f:pac.test.appstudio.openshift.io/url-org': {}
+            'f:pac.test.appstudio.openshift.io/log-url': {}
+            'f:pac.test.appstudio.openshift.io/pull-request': {}
+            'f:pac.test.appstudio.openshift.io/max-keep-runs': {}
+            'f:pac.test.appstudio.openshift.io/url-repository': {}
+            'f:pac.test.appstudio.openshift.io/original-prname': {}
+            'f:pac.test.appstudio.openshift.io/repository': {}
+            'f:build.appstudio.openshift.io/repo': {}
+            'f:pac.test.appstudio.openshift.io/sha': {}
+            'f:pac.test.appstudio.openshift.io/on-event': {}
+            'f:pac.test.appstudio.openshift.io/git-provider': {}
+            'f:pac.test.appstudio.openshift.io/event-type': {}
+            'f:pac.test.appstudio.openshift.io/sha-url': {}
+            'f:pac.test.appstudio.openshift.io/installation-id': {}
+          'f:generateName': {}
+          'f:labels':
+            'f:pac.test.appstudio.openshift.io/state': {}
+            'f:appstudio.openshift.io/build-pipelinerun': {}
+            'f:pac.test.appstudio.openshift.io/sender': {}
+            'f:appstudio.openshift.io/application': {}
+            .: {}
+            'f:test.appstudio.openshift.io/type': {}
+            'f:pac.test.appstudio.openshift.io/check-run-id': {}
+            'f:pac.test.appstudio.openshift.io/branch': {}
+            'f:appstudio.openshift.io/component': {}
+            'f:test.appstudio.openshift.io/pipelinerunfinishtime': {}
+            'f:pac.test.appstudio.openshift.io/url-org': {}
+            'f:pac.test.appstudio.openshift.io/pull-request': {}
+            'f:pac.test.appstudio.openshift.io/url-repository': {}
+            'f:pac.test.appstudio.openshift.io/original-prname': {}
+            'f:pac.test.appstudio.openshift.io/repository': {}
+            'f:pac.test.appstudio.openshift.io/sha': {}
+            'f:pac.test.appstudio.openshift.io/git-provider': {}
+            'f:pac.test.appstudio.openshift.io/event-type': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"ebb689ba-9716-4073-9c27-c2a3c6d4475a"}': {}
+        'f:spec':
+          .: {}
+          'f:application': {}
+          'f:artifacts': {}
+          'f:components': {}
+      manager: manager
+      operation: Update
+      time: '2023-12-05T11:12:13Z'
+  namespace: rh-acs-tenant
+  ownerReferences:
+    - apiVersion: appstudio.redhat.com/v1alpha1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Application
+      name: acs
+      uid: ebb689ba-9716-4073-9c27-c2a3c6d4475a
+  labels:
+    appstudio.openshift.io/component: main
+    pac.test.appstudio.openshift.io/pull-request: '8689'
+    pac.test.appstudio.openshift.io/url-repository: stackrox
+    pac.test.appstudio.openshift.io/repository: roxctl
+    pac.test.appstudio.openshift.io/git-provider: github
+    pac.test.appstudio.openshift.io/event-type: pull_request
+    test.appstudio.openshift.io/pipelinerunfinishtime: '1701773039'
+    pac.test.appstudio.openshift.io/url-org: stackrox
+    pac.test.appstudio.openshift.io/original-prname: main-on-pull-request
+    appstudio.openshift.io/build-pipelinerun: main-on-pull-request-s2th2
+    pac.test.appstudio.openshift.io/sha: 429e796a9b73dd9f271b5b558d242e53794221e9
+    pac.test.appstudio.openshift.io/sender: msugakov
+    appstudio.openshift.io/application: acs
+    pac.test.appstudio.openshift.io/state: completed
+    test.appstudio.openshift.io/type: component
+    pac.test.appstudio.openshift.io/branch: master
+    pac.test.appstudio.openshift.io/check-run-id: '19323605484'
+spec:
+  application: acs
+  artifacts: {}
+  components:
+    - containerImage: >-
+        quay.io/redhat-user-workloads/rh-acs-tenant/acs/roxctl@sha256:3ec7a3cd38dbafafa766b22bfc3c433aaafdfed29d41ef2e01e372260b304b9d
+      name: roxctl
+      source:
+        git:
+          dockerfileUrl: Dockerfile
+          revision: 3a373fc1658fa3bb7314f9bbdeb7b8f8ca066126
+          url: 'https://github.com/stackrox/stackrox'
+    - containerImage: >-
+        quay.io/redhat-user-workloads/rh-acs-tenant/acs/central-db@sha256:bedba7db0634d801be86d7d18286adfc90d251ff39be1efc567cc25d5c362c28
+      name: central-db
+      source:
+        git:
+          dockerfileUrl: image/postgres/rhtap.Dockerfile
+          revision: 3a373fc1658fa3bb7314f9bbdeb7b8f8ca066126
+          url: 'https://github.com/stackrox/stackrox'
+    - containerImage: >-
+        quay.io/redhat-user-workloads/rh-acs-tenant/acs/main@sha256:5f715a2ca023dc549abaacb3ec4d7b4ad644c34ca8e7ff697b5cda92b811e731
+      name: main
+      source:
+        git:
+          revision: 429e796a9b73dd9f271b5b558d242e53794221e9
+          url: 'https://github.com/stackrox/stackrox'
+    - containerImage: >-
+        quay.io/abiton1/ansible-automation-platform-2-next-eda-controller-rhel8:latest
+      name: central-db
+      source:
+        git:
+          dockerfileUrl: image/postgres/rhtap.Dockerfile
+          revision: 3a373fc1658fa3bb7314f9bbdeb7b8f8ca066126
+          url: 'https://github.com/stackrox/stackrox'
+status:
+  conditions:
+    - lastTransitionTime: '2023-12-05T10:44:05Z'
+      message: Snapshot starts being tested by the integrationPipelineRun
+      reason: InProgress
+      status: Unknown
+      type: AppStudioIntegrationStatus
+    - lastTransitionTime: '2023-12-05T10:44:05Z'
+      message: 'No required IntegrationTestScenarios found, skipped testing'
+      reason: Passed
+      status: 'True'
+      type: AppStudioTestSucceeded
